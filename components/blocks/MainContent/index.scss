@@ -1,6 +1,11 @@
 .main-content {
 
     &__container {}
+    &__title {
+        font-size: 24px;
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
 
     &__list {
         margin: 0;

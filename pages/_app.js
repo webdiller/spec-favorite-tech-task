@@ -1,12 +1,15 @@
-import {Provider} from 'react-redux';
-import {createWrapper} from 'next-redux-wrapper';
-import store from '../store/store';
+import { Provider } from "react-redux";
+import { createWrapper } from "next-redux-wrapper";
+import store from "../store/store";
 import "../styles/index.scss";
 
 function MyApp({ Component, pageProps }) {
-  return <Provider store={store}>
-    <Component {...pageProps} />
-</Provider>;
+  const getLayout = Component.getLayout || ((page) => page);
+  return getLayout(
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
+  );
 }
 
 const makeStore = () => store;

@@ -22,25 +22,25 @@ export default function Sidebar() {
             </a>
           </Link>
 
-          <Link href="#">
+          <Link href="/">
             <a className="sidebar__item">
               <AiFillHome className="sidebar__item-icon" />
               <span className="sidebar__item-text">Главная</span>
             </a>
           </Link>
-          <Link href="#">
+          <Link href="/clients">
             <a className="sidebar__item">
               <HiUserGroup className="sidebar__item-icon" />
               <span className="sidebar__item-text">Клиенты</span>
             </a>
           </Link>
-          <Link href="#">
+          <Link href="/workers">
             <a className="sidebar__item">
               <FaLayerGroup className="sidebar__item-icon" />
               <span className="sidebar__item-text">Сотрудники</span>
             </a>
           </Link>
-          <Link href="#">
+          <Link href="/analytics">
             <a className="sidebar__item">
               <IoMdAnalytics className="sidebar__item-icon" />
               <span className="sidebar__item-text">Аналитика</span>

@@ -1,10 +1,12 @@
 import { useSelector } from "react-redux";
 
-export default function MainContent({ users }) {
+export default function MainContent({ title, users }) {
   const { userSubstring } = useSelector((state) => state.searchUsers);
   return (
     <div className="main-content">
       <div className="container main-content__container">
+        <p className="main-content__title">Страница: {title}</p>
+
         {users && (
           <ul className="main-content__list">
             {users

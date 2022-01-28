@@ -64,6 +64,10 @@
       opacity: 1;
       visibility: visible;
     }
+
+    &:focus-within {
+      backdrop-filter: blur(2px);
+    }
   }
   &__group {
   }
