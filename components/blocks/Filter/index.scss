@@ -1,0 +1,94 @@
+.filter {
+  background-color: #f5f3f3;
+  &_with-margin {
+    margin-top: 10px;
+  }
+  &__container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  &__title-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &__title {
+    margin-right: auto;
+    font-size: 20px;
+
+    font-weight: 600;
+  }
+  &__icon-wrapper {
+    @include reset-btn();
+    height: 20px;
+    background-color: transparent;
+    transition: all .3s ease;
+    outline: 2px dashed transparent;
+    outline-offset: 3px;
+    border-radius: 50%;
+    // Для большей области нажатия
+    &::before {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: -20px;
+      width: calc(100% + 20px + 20px);
+      height: calc(100% + 15px);
+    }
+    &:focus {
+      outline-color: #224bff;
+    }
+  }
+  &__icon {
+    font-size: 20px;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s ease;
+
+    &.active {
+      margin-top: 10px;
+
+      overflow: visible;
+      max-height: 100%;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__group {
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  &__input {
+    @include reset-input();
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    background-color: #fff;
+
+    transition: all 0.3s ease;
+    outline: 2px dashed transparent;
+    outline-offset: 3px;
+    &:focus,
+    &:focus-within {
+      outline-color: #224bff;
+    }
+  }
+}
